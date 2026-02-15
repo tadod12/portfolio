@@ -1,0 +1,43 @@
+{
+    "nav": {
+        "home": "Trang Chủ",
+        "about": "Giới Thiệu",
+        "experience": "Kinh Nghiệm",
+        "blog": "Blog",
+        "contact": "Liên Hệ"
+    },
+    "hero": {
+        "title": "Kỹ Sư Dữ Liệu",
+        "cta_contact": "Liên Hệ",
+        "cta_blog": "Đọc Blog"
+    },
+    "about": {
+        "title": "Giới Thiệu",
+        "summary": "Tôi là Kỹ sư Dữ liệu với niềm đam mê xây dựng các luồng dữ liệu mở rộng và kiến trúc tối ưu. Phương pháp của tôi kết hợp sự chính xác về kỹ thuật với triết lý thiết kế tối giản.",
+        "skills_title": "Công Nghệ",
+        "philosophy_title": "Triết Lý",
+        "philosophy": "Đơn giản là đỉnh cao của sự tinh tế. Tôi tin vào việc viết mã sạch, dễ bảo trì để giải quyết các vấn đề phức tạp một cách hiệu quả."
+    },
+    "experience": {
+        "title": "Kinh Nghiệm",
+        "items": [
+            {
+                "company": "VNPAY",
+                "role": "Kỹ Sư Dữ Liệu",
+                "period": "2023 - Hiện tại",
+                "description": "Thiết kế và duy trì các luồng dữ liệu hiệu suất cao. Tối ưu hóa quy trình ETL và đảmból chất lượng dữ liệu cho hàng triệu giao dịch mỗi ngày."
+            }
+        ]
+    },
+    "contact": {
+        "title": "Liên Hệ",
+        "description": "Bạn muốn hợp tác hoặc có câu hỏi? Đừng ngần ngại liên hệ với tôi.",
+        "email_label": "Email",
+        "phone_label": "Điện Thoại",
+        "copy": "Sao chép",
+        "copied": "Đã sao chép!"
+    },
+    "footer": {
+        "copyright": "© 2026 DoDat. Bảo lưu mọi quyền."
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "experience": "Experience",
+        "blog": "Blog",
+        "contact": "Contact"
+    },
+    "hero": {
+        "title": "Data Engineer",
+        "cta_contact": "Contact Me",
+        "cta_blog": "Read Blog"
+    },
+    "about": {
+        "title": "About Me",
+        "summary": "I am a Data Engineer with a passion for building scalable data pipelines and optimized architectures. My approach combines technical precision with a minimalist design philosophy.",
+        "skills_title": "Tech Stack",
+        "philosophy_title": "Philosophy",
+        "philosophy": "Simplicity is the ultimate sophistication. I believe in writing clean, maintainable code that solves complex problems efficiently."
+    },
+    "experience": {
+        "title": "Experience",
+        "items": [
+            {
+                "company": "VNPAY",
+                "role": "Data Engineer",
+                "period": "2023 - Present",
+                "description": "Architecting and maintaining high-throughput data pipelines. optimizing ETL processes, and ensuring data quality for millions of daily transactions."
+            }
+        ]
+    },
+    "contact": {
+        "title": "Contact",
+        "description": "Interested in working together or have a question? Feel free to reach out.",
+        "email_label": "Email",
+        "phone_label": "Phone",
+        "copy": "Copy",
+        "copied": "Copied!"
+    },
+    "footer": {
+        "copyright": "© 2026 DoDat. All rights reserved."
+    }
+}
