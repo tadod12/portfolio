@@ -7,7 +7,9 @@
         "contact": "Contact"
     },
     "hero": {
+        "name": "DoDat",
         "title": "Data Engineer",
+        "subtitle": "Building scalable data pipelines and crafting minimalist web experiences. Turning complex data into clear insights.",
         "cta_contact": "Contact Me",
         "cta_blog": "Read Blog"
     },

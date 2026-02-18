@@ -7,7 +7,9 @@
         "contact": "Liên Hệ"
     },
     "hero": {
+        "name": "DoDat",
         "title": "Kỹ Sư Dữ Liệu",
+        "subtitle": "Xây dựng các luồng dữ liệu mở rộng và tạo ra trải nghiệm web tối giản. Biến dữ liệu phức tạp thành thông tin chi tiết rõ ràng.",
         "cta_contact": "Liên Hệ",
         "cta_blog": "Đọc Blog"
     },

@@ -8,7 +8,9 @@ import { Locale } from "@/app/i18n";
 interface HeroProps {
     lang: Locale;
     dict: {
+        name: string;
         title: string;
+        subtitle: string;
         cta_contact: string;
         cta_blog: string;
     };
@@ -29,7 +31,7 @@ export default function Hero({ lang, dict }: HeroProps) {
                 >
                     <h1 className="text-5xl md:text-7xl font-heading font-bold tracking-tight text-foreground mb-6">
                         <span className="relative inline-block">
-                            DoDat
+                            {dict.name}
                             <span className="absolute -bottom-2 left-0 w-full h-3 bg-accent -z-10 transform -rotate-1 rounded-sm shadow-sm group-hover:rotate-0 transition-transform"></span>
                         </span>
                     </h1>
@@ -37,8 +39,7 @@ export default function Hero({ lang, dict }: HeroProps) {
                         {dict.title}
                     </h2>
                     <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto mb-10 leading-relaxed">
-                        Building scalable data pipelines and crafting minimalist web experiences.
-                        Turning complex data into clear insights.
+                        {dict.subtitle}
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
