@@ -1,8 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Locale } from "@/app/i18n";
-import { Calendar, Building2 } from "lucide-react";
+import { Calendar } from "lucide-react";
+import { Section } from "@/components/ui/Section";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 interface ExperienceItem {
     company: string;
@@ -21,51 +22,45 @@ interface ExperienceProps {
 
 export default function Experience({ lang, dict }: ExperienceProps) {
     return (
-        <section id="experience" className="py-24 bg-background/50 px-4 sm:px-6 lg:px-8 bg-accent/5">
-            <div className="max-w-4xl mx-auto">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                >
-                    <h2 className="text-3xl md:text-4xl font-heading font-bold mb-12 text-center relative inline-block w-full">
-                        {dict.title}
-                    </h2>
+        <Section id="experience" className="bg-muted/10">
+            <ScrollReveal>
+                <h2 className="text-4xl md:text-6xl font-heading font-bold mb-16 text-left">
+                    {dict.title}
+                </h2>
+            </ScrollReveal>
 
-                    <div className="space-y-8">
-                        {dict.items.map((item, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.1 }}
-                                className="bg-card p-8 rounded-2xl shadow-sm border border-border hover:border-accent hover:shadow-md transition-all duration-300 relative overflow-hidden group"
-                            >
-                                <div className="absolute top-0 right-0 w-24 h-24 bg-accent/10 rounded-bl-full -mr-12 -mt-12 transition-transform group-hover:scale-150 duration-500"></div>
+            <div className="max-w-4xl">
+                <div className="border-l-2 border-border/50 ml-3 md:ml-0 md:pl-8 space-y-16">
+                    {dict.items.map((item, index) => (
+                        <ScrollReveal key={index} delay={index * 0.1}>
+                            <div className="relative pl-8 md:pl-0 group">
+                                {/* Timeline Dot */}
+                                <div className="absolute -left-[41px] md:-left-[41px] top-2 w-5 h-5 bg-background border-4 border-muted rounded-full group-hover:border-accent transition-colors duration-300 z-10" />
 
-                                <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 relative z-10">
-                                    <div>
-                                        <h3 className="text-xl font-bold text-foreground">{item.role}</h3>
-                                        <div className="flex items-center gap-2 text-accent font-medium mt-1">
-                                            <Building2 className="w-4 h-4" />
+                                <div className="grid md:grid-cols-4 gap-4 md:gap-8 items-baseline">
+                                    <div className="md:col-span-1">
+                                        <span className="text-sm font-mono text-muted-foreground flex items-center gap-2">
+                                            <Calendar className="w-3 h-3" />
+                                            {item.period}
+                                        </span>
+                                    </div>
+                                    <div className="md:col-span-3">
+                                        <h3 className="text-2xl font-bold text-foreground mb-1 group-hover:text-accent transition-colors duration-300">
+                                            {item.role}
+                                        </h3>
+                                        <div className="text-lg font-medium text-foreground/80 mb-4">
                                             {item.company}
                                         </div>
-                                    </div>
-                                    <div className="flex items-center gap-2 text-muted-foreground text-sm mt-2 md:mt-0 bg-secondary px-3 py-1 rounded-full border border-border">
-                                        <Calendar className="w-3 h-3" />
-                                        {item.period}
+                                        <p className="text-muted-foreground leading-relaxed">
+                                            {item.description}
+                                        </p>
                                     </div>
                                 </div>
-                                <p className="text-foreground/80 leading-relaxed relative z-10">
-                                    {item.description}
-                                </p>
-                            </motion.div>
-                        ))}
-                    </div>
-                </motion.div>
+                            </div>
+                        </ScrollReveal>
+                    ))}
+                </div>
             </div>
-        </section>
+        </Section>
     );
 }

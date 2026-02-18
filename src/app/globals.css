@@ -4,28 +4,43 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  /* Minimalist Yellow Theme - Light */
-  --background: #ffffff;
-  --foreground: #171717;
-  --accent: #fbbf24;
-  /* Amber-400 */
-  --accent-foreground: #451a03;
-  --muted: #737373;
-  --muted-foreground: #a3a3a3;
-  --border: #e5e5e5;
-  --card: #ffffff;
+  /* Minimalist Yellow Theme - Light 
+     Using OKLCH for perceptually uniform colors
+  */
+  --background: oklch(0.985 0 0); /* Soft White */
+  --foreground: oklch(0.15 0.02 265); /* Soft Black with slight blue tint */
+  
+  /* Primary Brand Color: Vibrant Amber/Gold */
+  --accent: oklch(0.78 0.16 85); 
+  --accent-foreground: oklch(0.25 0.06 85); /* Deep Brown/Gold */
+  
+  --muted: oklch(0.85 0.02 265);
+  --muted-foreground: oklch(0.50 0.02 265);
+  
+  --border: oklch(0.92 0.01 265);
+  --card: oklch(1 0 0);
+  
+  /* Selection Color */
+  --selection: oklch(0.90 0.10 85);
 }
 
 .dark {
-  /* Minimalist Yellow Theme - Dark */
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --accent: #fbbf24;
-  --accent-foreground: #451a03;
-  --muted: #a3a3a3;
-  --muted-foreground: #525252;
-  --border: #262626;
-  --card: #171717;
+  /* Minimalist Yellow Theme - Dark 
+     Rich Obsidian/Charcoal tones instead of dead black
+  */
+  --background: oklch(0.12 0.01 265); /* Rich Charcoal */
+  --foreground: oklch(0.95 0.01 265); /* Soft White */
+  
+  --accent: oklch(0.78 0.16 85); /* Keep accent mostly same for brand consistency */
+  --accent-foreground: oklch(0.12 0.01 265);
+  
+  --muted: oklch(0.20 0.01 265);
+  --muted-foreground: oklch(0.65 0.01 265);
+  
+  --border: oklch(0.20 0.01 265);
+  --card: oklch(0.14 0.01 265);
+  
+  --selection: oklch(0.25 0.08 85);
 }
 
 @theme {
@@ -38,14 +53,41 @@
   --color-border: var(--border);
   --color-card: var(--card);
 
-  --font-sans: var(--font-inter), sans-serif;
-  --font-heading: var(--font-outfit), sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+  
+  /* Refined animations */
+  --ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background-color: var(--background);
     color: var(--foreground);
-    @apply antialiased transition-colors duration-300;
+    @apply antialiased transition-colors duration-500 ease-out;
+  }
+  
+  /* Custom Selection */
+  ::selection {
+    background-color: var(--selection);
+    color: var(--accent-foreground);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .glass {
+    @apply bg-background/80 backdrop-blur-md border border-border/50;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-foreground to-neutral-500;
   }
 }

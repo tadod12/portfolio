@@ -1,7 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Locale } from "@/app/i18n";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { Section } from "@/components/ui/Section";
 
 interface AboutProps {
     lang: Locale;
@@ -18,48 +19,50 @@ export default function About({ lang, dict }: AboutProps) {
     const skills = ["Python", "SQL", "Spark", "Kafka", "AWS", "Docker", "Next.js", "TypeScript"];
 
     return (
-        <section id="about" className="py-24 bg-background px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start"
-                >
-                    <div>
-                        <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-foreground relative inline-block">
+        <Section id="about" className="bg-background">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+                <div className="md:col-span-5 relative">
+                    <ScrollReveal>
+                        <h2 className="text-4xl md:text-6xl font-heading font-bold mb-8 text-foreground leading-tight">
                             {dict.title}
-                            <span className="absolute -bottom-2 left-0 w-1/2 h-2 bg-accent/30 rounded-full"></span>
                         </h2>
-                        <p className="text-lg text-foreground/80 leading-relaxed mb-6">
+                        <div className="p-8 bg-muted/30 rounded-none border-l-4 border-accent">
+                            <h3 className="text-sm font-mono uppercase tracking-widest mb-4 text-accent-foreground/60">{dict.philosophy_title}</h3>
+                            <p className="text-xl md:text-2xl font-light italic text-foreground leading-relaxed">
+                                "{dict.philosophy}"
+                            </p>
+                        </div>
+                    </ScrollReveal>
+                </div>
+
+                <div className="md:col-span-1 hidden md:block border-r border-border h-full mx-auto opacity-50" />
+
+                <div className="md:col-span-6 space-y-12">
+                    <ScrollReveal delay={0.2}>
+                        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                             {dict.summary}
                         </p>
-                        <div className="p-6 bg-accent/5 rounded-2xl border border-accent/10">
-                            <h3 className="text-xl font-heading font-semibold mb-3 text-foreground">{dict.philosophy_title}</h3>
-                            <p className="text-muted italic">"{dict.philosophy}"</p>
-                        </div>
-                    </div>
+                    </ScrollReveal>
 
-                    <div>
-                        <h3 className="text-2xl font-heading font-semibold mb-6 text-foreground">{dict.skills_title}</h3>
-                        <div className="flex flex-wrap gap-3">
-                            {skills.map((skill, index) => (
-                                <motion.span
-                                    key={skill}
-                                    initial={{ opacity: 0, scale: 0.9 }}
-                                    whileInView={{ opacity: 1, scale: 1 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: index * 0.05 }}
-                                    className="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-accent hover:bg-accent hover:text-accent-foreground transition-all shadow-sm"
-                                >
-                                    {skill}
-                                </motion.span>
-                            ))}
+                    <ScrollReveal delay={0.3}>
+                        <div>
+                            <h3 className="text-sm font-mono uppercase tracking-widest mb-6 text-foreground/50 border-b border-border pb-2 inline-block">
+                                {dict.skills_title}
+                            </h3>
+                            <div className="flex flex-wrap gap-3">
+                                {skills.map((skill, index) => (
+                                    <span
+                                        key={skill}
+                                        className="px-4 py-2 bg-background border border-border text-sm font-medium hover:border-accent hover:text-accent transition-colors cursor-default"
+                                    >
+                                        {skill}
+                                    </span>
+                                ))}
+                            </div>
                         </div>
-                    </div>
-                </motion.div>
+                    </ScrollReveal>
+                </div>
             </div>
-        </section>
+        </Section>
     );
 }
