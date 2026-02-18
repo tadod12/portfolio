@@ -6,6 +6,7 @@ import { ArrowRight, ArrowDown } from "lucide-react";
 import Image from "next/image";
 import { Locale } from "@/app/i18n";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import heroImage from "@/assets/hero.png";
 
 interface HeroProps {
     lang: Locale;
@@ -91,21 +92,17 @@ export default function Hero({ lang, dict }: HeroProps) {
                     <div className="absolute inset-0 bg-gradient-to-tr from-accent/20 to-transparent rounded-full blur-3xl opacity-50" />
 
                     <div className="relative z-10 w-full h-full border border-border/50 bg-card/30 backdrop-blur-sm p-4 rounded-3xl shadow-2xl rotate-3 hover:rotate-0 transition-all duration-700 ease-out-quart">
-                        {/* 
-                            TODO: Replace with your own image!
-                            1. Add your image to /public/hero.png (or .jpg)
-                            2. Update the src below to "/hero.png"
-                        */}
                         <div className="relative h-full w-full rounded-2xl overflow-hidden bg-muted group">
                             <Image
-                                src="/hero.png"
+                                src={heroImage}
                                 alt="Hero Image"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                                 priority
+                                placeholder="blur"
                             />
-                            {/* Overlay for better text on image if needed, or just aesthetic */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent z-10 mix-blend-overlay" />
+                            {/* Reduced overlay opacity for better visibility */}
+                            <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent z-10 mix-blend-overlay opacity-50" />
                         </div>
                     </div>
                 </motion.div>
