@@ -7,19 +7,22 @@
   /* Minimalist Yellow Theme - Light 
      Using OKLCH for perceptually uniform colors
   */
-  --background: oklch(0.985 0 0); /* Soft White */
-  --foreground: oklch(0.15 0.02 265); /* Soft Black with slight blue tint */
-  
+  --background: oklch(0.985 0 0);
+  /* Soft White */
+  --foreground: oklch(0.15 0.02 265);
+  /* Soft Black with slight blue tint */
+
   /* Primary Brand Color: Vibrant Amber/Gold */
-  --accent: oklch(0.78 0.16 85); 
-  --accent-foreground: oklch(0.25 0.06 85); /* Deep Brown/Gold */
-  
+  --accent: oklch(0.78 0.16 85);
+  --accent-foreground: oklch(0.25 0.06 85);
+  /* Deep Brown/Gold */
+
   --muted: oklch(0.85 0.02 265);
   --muted-foreground: oklch(0.50 0.02 265);
-  
+
   --border: oklch(0.92 0.01 265);
   --card: oklch(1 0 0);
-  
+
   /* Selection Color */
   --selection: oklch(0.90 0.10 85);
 }
@@ -28,18 +31,23 @@
   /* Minimalist Yellow Theme - Dark 
      Rich Obsidian/Charcoal tones instead of dead black
   */
-  --background: oklch(0.12 0.01 265); /* Rich Charcoal */
-  --foreground: oklch(0.95 0.01 265); /* Soft White */
-  
-  --accent: oklch(0.78 0.16 85); /* Keep accent mostly same for brand consistency */
+  --background: oklch(0.12 0.01 265);
+  /* Rich Charcoal */
+  --foreground: oklch(0.95 0.01 265);
+  /* Soft White */
+
+  --accent: oklch(0.78 0.16 85);
+  /* Keep accent mostly same for brand consistency */
   --accent-foreground: oklch(0.12 0.01 265);
-  
+
   --muted: oklch(0.20 0.01 265);
-  --muted-foreground: oklch(0.65 0.01 265);
-  
+  --muted-foreground: oklch(0.80 0.01 265);
+  /* Increased contrast from 0.65 */
+
   --border: oklch(0.20 0.01 265);
-  --card: oklch(0.14 0.01 265);
-  
+  --card: oklch(0.17 0.01 265);
+  /* Increased contrast from 0.14 */
+
   --selection: oklch(0.25 0.08 85);
 }
 
@@ -55,7 +63,7 @@
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-heading: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
-  
+
   /* Refined animations */
   --ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -70,7 +78,7 @@
     color: var(--foreground);
     @apply antialiased transition-colors duration-500 ease-out;
   }
-  
+
   /* Custom Selection */
   ::selection {
     background-color: var(--selection);
@@ -82,11 +90,11 @@
   .text-balance {
     text-wrap: balance;
   }
-  
+
   .glass {
     @apply bg-background/80 backdrop-blur-md border border-border/50;
   }
-  
+
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-foreground to-neutral-500;
   }
