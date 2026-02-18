@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, ArrowDown } from "lucide-react";
+import Image from "next/image";
 import { Locale } from "@/app/i18n";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
@@ -96,19 +97,14 @@ export default function Hero({ lang, dict }: HeroProps) {
                             2. Update the src below to "/hero.png"
                         */}
                         <div className="relative h-full w-full rounded-2xl overflow-hidden bg-muted group">
-                            <div className="absolute inset-0 flex items-center justify-center text-muted-foreground bg-muted/50 z-0">
-                                <span className="text-sm">Add image to /public/hero.png</span>
-                            </div>
-                            {/* Uncomment the Image component when you have a file
-                            <Image 
-                                src="/hero.png" 
+                            <Image
+                                src="/hero.png"
                                 alt="Hero Image"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                                 priority
                             />
-                            */}
-                            {/* Temporary visual until image is added */}
+                            {/* Overlay for better text on image if needed, or just aesthetic */}
                             <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent z-10 mix-blend-overlay" />
                         </div>
                     </div>
