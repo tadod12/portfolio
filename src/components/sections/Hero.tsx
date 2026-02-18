@@ -85,12 +85,31 @@ export default function Hero({ lang, dict }: HeroProps) {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-                    className="hidden md:block relative h-full min-h-[500px]"
+                    className="hidden md:block relative h-full min-h-[600px] w-full"
                 >
                     <div className="absolute inset-0 bg-gradient-to-tr from-accent/20 to-transparent rounded-full blur-3xl opacity-50" />
-                    <div className="relative z-10 w-full h-full border border-border/50 bg-card/30 backdrop-blur-sm p-8 rounded-2xl shadow-2xl rotate-3 hover:rotate-0 transition-all duration-700 ease-out-quart">
-                        <div className="h-full w-full border border-dashed border-border/50 rounded-lg flex items-center justify-center">
-                            <span className="font-mono text-sm text-muted-foreground">Portfolio_v2.0_Concept</span>
+
+                    <div className="relative z-10 w-full h-full border border-border/50 bg-card/30 backdrop-blur-sm p-4 rounded-3xl shadow-2xl rotate-3 hover:rotate-0 transition-all duration-700 ease-out-quart">
+                        {/* 
+                            TODO: Replace with your own image!
+                            1. Add your image to /public/hero.png (or .jpg)
+                            2. Update the src below to "/hero.png"
+                        */}
+                        <div className="relative h-full w-full rounded-2xl overflow-hidden bg-muted group">
+                            <div className="absolute inset-0 flex items-center justify-center text-muted-foreground bg-muted/50 z-0">
+                                <span className="text-sm">Add image to /public/hero.png</span>
+                            </div>
+                            {/* Uncomment the Image component when you have a file
+                            <Image 
+                                src="/hero.png" 
+                                alt="Hero Image"
+                                fill
+                                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                priority
+                            />
+                            */}
+                            {/* Temporary visual until image is added */}
+                            <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent z-10 mix-blend-overlay" />
                         </div>
                     </div>
                 </motion.div>

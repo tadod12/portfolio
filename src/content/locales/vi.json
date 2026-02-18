@@ -31,6 +31,45 @@
             }
         ]
     },
+    "projects": {
+        "title": "Dự Án Tiêu Biểu",
+        "items": [
+            {
+                "title": "Portfolio V2",
+                "description": "Trang web cá nhân hiệu năng cao được xây dựng với Next.js 15, Tailwind CSS và Framer Motion. Thiết kế theo phong cách Neo-Brutalist, hệ màu OKLCH và hỗ trợ đa ngôn ngữ.",
+                "tech": [
+                    "Next.js",
+                    "TypeScript",
+                    "Tailwind CSS",
+                    "Framer Motion"
+                ],
+                "link": "https://dodat.dev",
+                "repo": "https://github.com/tadod12/portfolio"
+            },
+            {
+                "title": "Real-time Analytics Pipeline",
+                "description": "Kiến trúc pipeline dữ liệu mở rộng xử lý hơn 1 triệu sự kiện/giây. Sử dụng Kafka để thu thập, Spark để chuyển đổi và ClickHouse cho phân tích thời gian thực.",
+                "tech": [
+                    "Apache Kafka",
+                    "Spark",
+                    "ClickHouse",
+                    "Docker"
+                ],
+                "repo": "https://github.com/tadod12/analytics-pipeline"
+            },
+            {
+                "title": "E-commerce Data Warehouse",
+                "description": "Thiết kế kho dữ liệu hiện đại cho nền tảng bán lẻ. Triển khai các mô hình DBT để chuyển đổi và Airflow để điều phối, giảm độ trễ báo cáo xuống 40%.",
+                "tech": [
+                    "Snowflake",
+                    "DBT",
+                    "Airflow",
+                    "Python"
+                ],
+                "repo": "https://github.com/tadod12/ecommerce-dwh"
+            }
+        ]
+    },
     "contact": {
         "title": "Liên Hệ",
         "description": "Bạn muốn hợp tác hoặc có câu hỏi? Đừng ngần ngại liên hệ với tôi.",

@@ -31,6 +31,45 @@
             }
         ]
     },
+    "projects": {
+        "title": "Selected Works",
+        "items": [
+            {
+                "title": "Portfolio V2",
+                "description": "A high-performance personal portfolio built with Next.js 15, Tailwind CSS, and Framer Motion. Features a Neo-Brutalist design, OKLCH color system, and full internationalization.",
+                "tech": [
+                    "Next.js",
+                    "TypeScript",
+                    "Tailwind CSS",
+                    "Framer Motion"
+                ],
+                "link": "https://dodat.dev",
+                "repo": "https://github.com/tadod12/portfolio"
+            },
+            {
+                "title": "Real-time Analytics Pipeline",
+                "description": "Architected a scalable data pipeline processing 1M+ events/second. Utilized Kafka for ingestion, Spark for transformations, and ClickHouse for real-time analytics.",
+                "tech": [
+                    "Apache Kafka",
+                    "Spark",
+                    "ClickHouse",
+                    "Docker"
+                ],
+                "repo": "https://github.com/tadod12/analytics-pipeline"
+            },
+            {
+                "title": "E-commerce Data Warehouse",
+                "description": "Designed a modern data warehouse for a retail platform. Implemented DBT models for transformation and Airflow for orchestration, reducing reporting latency by 40%.",
+                "tech": [
+                    "Snowflake",
+                    "DBT",
+                    "Airflow",
+                    "Python"
+                ],
+                "repo": "https://github.com/tadod12/ecommerce-dwh"
+            }
+        ]
+    },
     "contact": {
         "title": "Contact",
         "description": "Interested in working together or have a question? Feel free to reach out.",
