@@ -67,17 +67,17 @@ export default function NavBar({ lang, dict }: NavBarProps) {
                             <div className="flex items-center gap-4 ml-4 border-l pl-4 border-border">
                                 <ThemeToggle />
                                 <div className="flex items-center gap-1">
-                                    <Globe className="w-4 h-4 text-muted" />
+                                    <Globe className="w-4 h-4 text-muted-foreground" />
                                     <Link
                                         href={switchLocale('en')}
-                                        className={cn("text-sm hover:text-accent font-medium", lang === 'en' ? "text-foreground" : "text-muted")}
+                                        className={cn("text-sm hover:text-accent font-medium", lang === 'en' ? "text-foreground" : "text-muted-foreground")}
                                     >
                                         EN
                                     </Link>
-                                    <span className="text-muted">/</span>
+                                    <span className="text-muted-foreground">/</span>
                                     <Link
                                         href={switchLocale('vi')}
-                                        className={cn("text-sm hover:text-accent font-medium", lang === 'vi' ? "text-foreground" : "text-muted")}
+                                        className={cn("text-sm hover:text-accent font-medium", lang === 'vi' ? "text-foreground" : "text-muted-foreground")}
                                     >
                                         VI
                                     </Link>
@@ -121,8 +121,8 @@ export default function NavBar({ lang, dict }: NavBarProps) {
                             ))}
                             <div className="flex items-center justify-between px-3 py-2 mt-4 border-t border-border pt-4">
                                 <div className="flex items-center gap-4">
-                                    <Link href={switchLocale('en')} className={cn("text-sm font-medium", lang === 'en' ? "text-accent" : "text-muted")}>English</Link>
-                                    <Link href={switchLocale('vi')} className={cn("text-sm font-medium", lang === 'vi' ? "text-accent" : "text-muted")}>Tiếng Việt</Link>
+                                    <Link href={switchLocale('en')} className={cn("text-sm font-medium", lang === 'en' ? "text-accent" : "text-muted-foreground")}>English</Link>
+                                    <Link href={switchLocale('vi')} className={cn("text-sm font-medium", lang === 'vi' ? "text-accent" : "text-muted-foreground")}>Tiếng Việt</Link>
                                 </div>
                                 <ThemeToggle />
                             </div>
